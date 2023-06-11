@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@500&display=swap');
+
+.header{
+    
+}
+.ab{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    height: 100vh;
+    width: 250px;
+    background-color: aliceblue;
+    transform: translateX(-250px);
+}
+.nav--open.ab {
+    transform: translateX(0);
+    box-shadow: 0 0 0;
+}
+.link{
+   display:flex;
+   align-items: center;
+   color: black; 
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+   padding: 12px 15px;
+}
+.link > i{
+    margin-right: 16px;
+}
+.link--activate {
+    color: rgb(88, 88, 187);
+    background-color: aliceblue;
+}
+.link--activate,
+.link:hover {
+    background: #eeeeee;
+} 
+.abc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,0.57);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+}
+.nav--open .nav__overlay{
+    visibility: visible;
+    opacity: 1 ;
+
+}

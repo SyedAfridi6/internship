@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidebar Example</title>
+  <style>
+    /* CSS for the sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #f5f5f5;
+      transition: left 0.3s ease-in;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 10px;
+    }
+
+    /* CSS for the hamburger icon */
+    .hamburger {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .hamburger .line {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 5px 0;
+    }
+  </style>
+  <script>
+    // JavaScript to toggle the sidebar
+    function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </div>
+
+  <div class="hamburger" onclick="toggleSidebar()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>
